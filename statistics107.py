@@ -1,6 +1,19 @@
+"""
+A program that contains a lot of list functions and tests them
+
+file: statistics107.py
+
+author: Donovan Griego
+
+Date: 9-15-2021
+
+assignment: Lab 4
+"""
+
 # Fill in a correct implementation for each function.
 # Define other functions if you think they make the
 # assigned function easier to write or easier to read.
+
 
 def max(elements):
     """This function returns the largest element in the given list.
