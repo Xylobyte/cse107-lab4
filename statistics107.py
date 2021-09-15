@@ -3,40 +3,114 @@
 # assigned function easier to write or easier to read.
 
 def max(elements):
-    """This function returns the largest element in the given list."""
-    return 0
+    """This function returns the largest element in the given list.
+
+    elements: the list to process
+    """
+    largest = elements[0]
+    for e in elements:
+        if e > largest:
+            largest = e
+    return largest
 
 
 def min(elements):
-    return 0
+    """This function returns the smallest element in the given list.
+
+    elements: the list to process
+    """
+    smallest = elements[0]
+    for e in elements:
+        if e < smallest:
+            smallest = e
+    return smallest
 
 
 def sum(elements):
-    return 0
+    """This function returns the sum of the elements in the given list.
+
+    elements: the list to process
+    """
+    sum = 0
+    for e in elements:
+        sum += e
+    return sum
 
 
 def mean(elements):
+    """This function returns the mean of the elements in the given list.
+
+    elements: the list to process
+    """
     return sum(elements) / len(elements)
 
 
 def odds(elements):
-    return elements
+    """This function returns the odds of the elements in the given list.
+
+    elements: the list to process
+    """
+    lst = []
+    for e in elements:
+        if e % 2 == 1:
+            lst.append(e)
+    return lst
 
 
 def evens(elements):
-    return elements
+    """This function returns the evens of the elements in the given list.
+
+    elements: the list to process
+    """
+    lst = []
+    for e in elements:
+        if e % 2 == 0:
+            lst.append(e)
+    return lst
 
 
 def every_other(elements):
-    return elements
+    """This function returns every other element in the given list.
+
+    elements: the list to process
+    """
+    lst = []
+    count = 0
+    for e in elements:
+        if count % 2 == 0:
+            lst.append(e)
+        count += 1
+    return lst
 
 
 def every_other_odd(elements):
-    return elements
+    """This function returns every other odd element in the given list.
+
+    elements: the list to process
+    """
+    lst = []
+    count = 0
+    for e in elements:
+        if e % 2 == 1:
+            if count % 2 == 0:
+                lst.append(e)
+            count += 1
+    return lst
 
 
 def every_other_even(elements):
-    return elements
+    """This function returns every other odd element in the given list.
+
+    elements: the list to process
+    """
+    lst = []
+    count = 0
+    for e in elements:
+        if e % 2 == 0:
+            if count % 2 == 0:
+                lst.append(e)
+            count += 1
+    return lst
 
 
 def run_tests():
@@ -89,7 +163,8 @@ def run_tests():
 
             # f.__name__ is the function's name
             # for example, evens.__name__ is the string "evens"
-            print("Function '{}' given argument {}".format(f.__name__, test[1]))
+            print("Function '{}' given argument {}".format(
+                f.__name__, test[1]))
             print("Expected {}, but returned {}".format(expected, result))
     print("\nPassed {} out of {} tests.".format(passed, passed + failed))
 
