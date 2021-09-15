@@ -5,9 +5,9 @@ file: navigate2.py
 
 author: Donovan Griego
 
-Date: 9-13-2021
+Date: 9-15-2021
 
-assignment: Lab 3
+assignment: Lab 4
 """
 import turtle
 
